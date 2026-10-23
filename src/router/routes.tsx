@@ -1,9 +1,9 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 import RootLayout from "../components/layout/RootLayout";
 import Home from '../pages/Home'
 import Analyze from "../pages/Analyze";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/', element: <RootLayout />, children: [
       {
@@ -14,6 +14,4 @@ export const router = createBrowserRouter([
       }
     ]
   }
-] , {
-  basename: '/pooletobekosegavnazan'
-})
+])
