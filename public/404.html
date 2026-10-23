@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <script>
+    const segmentCount = 1;
+    const location = window.location;
+    const redirect =
+      location.protocol +
+      "//" +
+      location.host +
+      location.pathname
+        .split("/")
+        .slice(0, 1 + segmentCount)
+        .join("/") +
+      "/?/" +
+      location.pathname
+        .split("/")
+        .slice(1 + segmentCount)
+        .join("/")
+        .replace(/&/g, "~and~") +
+      location.search.replace(/&/g, "~and~") +
+      location.hash;
+    location.replace(redirect);
+  </script>
+</head>
+
+<body></body>
+
+</html>
