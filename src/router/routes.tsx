@@ -14,4 +14,6 @@ export const router = createBrowserRouter([
       }
     ]
   }
-])
+] , {
+  basename: '/pooletobekosegavnazan'
+})
