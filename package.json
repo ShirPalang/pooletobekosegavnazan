@@ -1,5 +1,6 @@
 {
   "name": "komak-be-khalghollah",
+  "homepage": "https://ShirPalang.github.io/pooletobekosegavnazan",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",
+    "@kingironman2011/vite-pages": "^1.1.0",
     "@rolldown/plugin-babel": "^0.2.3",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.13.3",
