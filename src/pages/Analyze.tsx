@@ -26,6 +26,9 @@ const ScoreRadialChart = lazy(() => import('../components/common/ScoreRadialChar
 const PostTypeChart = lazy(() => import('../components/common/charts/PostTypeChart'))
 const GrowthComparisonChart = lazy(() => import('../components/common/charts/GrowthComparisonChart'))
 const LikesPerPostChart = lazy(() => import('../components/common/charts/LikesPerPostChart'))
+import likeEmoji from "/src/assets/emoji/like.webp"
+import brokenEmoji from "/src/assets/emoji/brokenheart.webp"
+import cryEmoji from "/src/assets/emoji/cry.webp"
 
 const Analyze = () => {
 
@@ -50,7 +53,7 @@ const Analyze = () => {
   if (error) {
     return (
       <div className="w-full h-full flex justify-center items-center text-gray-400 text-2xl gap-2 font-semibold md:text-3xl">
-        {t('sorry')} <img src="/src/assets/emoji/cry.webp" alt="غم" className="w-7 md:w-10" />
+        {t('sorry')} <img src={cryEmoji} alt="غم" className="w-7 md:w-10" />
       </div>
     )
   }
@@ -133,8 +136,8 @@ const Analyze = () => {
               <p className="flex gap-1 md:text-lg">
                 {t('businessAccount')}
                 {
-                  data?.profile.isBusinessAccount ? <span className="flex items-center gap-1">{t('yes')} <AnimatedEmoji src="/src/assets/emoji/like.webp" title="خوشحال" /></span>
-                    : <span className="flex items-center gap-1">{t('no')} <AnimatedEmoji src="/src/assets/emoji/brokenheart.webp" title="غم" /></span>
+                  data?.profile.isBusinessAccount ? <span className="flex items-center gap-1">{t('yes')} <AnimatedEmoji src={likeEmoji} title="خوشحال" /></span>
+                    : <span className="flex items-center gap-1">{t('no')} <AnimatedEmoji src={brokenEmoji} title="غم" /></span>
                 }
               </p>
             </div>
